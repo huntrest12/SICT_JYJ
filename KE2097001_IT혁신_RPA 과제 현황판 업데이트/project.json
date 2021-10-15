@@ -1,0 +1,67 @@
+{
+  "name": "KE2097001",
+  "description": "RPA 과제 현황판 업데이트",
+  "main": "Main.xaml",
+  "dependencies": {
+    "Alphabet.Workflow.Activities": "[2.3.0]",
+    "Google.Apis": "[1.49.0]",
+    "Google.Apis.Calendar.v3": "[1.43.0.1872]",
+    "Google.Apis.Core": "[1.49.0]",
+    "Google.Apis.Gmail.v1": "[1.43.0.1859]",
+    "KoreanAir.Library": "[1.4.9]",
+    "Microsoft.Activities": "[1.0.1]",
+    "Microsoft.Activities.Extensions": "[2.0.6.9]",
+    "UiPath": "[21.4.23.31065]",
+    "UiPath.Cognitive.Activities": "[2.2.4]",
+    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
+    "UiPath.Excel.Activities": "[2.9.5]",
+    "UiPath.GSuite.Activities": "[1.8.0]",
+    "UiPath.Mail.Activities": "[1.9.5]",
+    "UiPath.System.Activities": "[21.4.0]",
+    "UiPath.UIAutomation.Activities": "[21.4.3]",
+    "UiPath.WebAPI.Activities": "[1.4.5]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.10.4.0",
+  "projectVersion": "1.0.9",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "516922d0-b44c-49ba-91f5-78fcd67f1c18",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {}
+}
