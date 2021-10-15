@@ -1,0 +1,292 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Exceed_프로그램_로그인" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1139,1527</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Exceed_프로그램_로그인_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="28">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Exceed_프로그램_로그인" sap:VirtualizedContainerService.HintSize="518,1462" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kill browser(iexplore, chrome), KALis, KALis Update, CM, 원격접속, Exceed, Notepad" DisplayName="KillAllProcesses workflow" sap:VirtualizedContainerService.HintSize="476,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_bExcel">True</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_bChrome">True</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_bEdge">True</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_bIExplorer">True</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <Delay sap2010:Annotation.AnnotationText="딜레이 2초" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="476,53" sap2010:WorkflowViewState.IdRef="Delay_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Delay>
+    <Sequence sap2010:Annotation.AnnotationText="Exceed 실행&#xA;서버 선택" DisplayName="Exceed 실행 | Sequence" sap:VirtualizedContainerService.HintSize="476,518" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Exceed 실행 | Open Application" FileName="C:\Program Files\Hummingbird\Connectivity\13.00\Exceed\exceed.exe" sap:VirtualizedContainerService.HintSize="434,322" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="b2c1b12e2d664d242b4234b29d9a6c64" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;">
+        <ui:OpenApplication.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:RestoreWindow Window="{x:Null}" ContinueOnError="True" DisplayName="Restore Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RestoreWindow_1" />
+              <ui:MaximizeWindow Window="{x:Null}" ContinueOnError="True" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenApplication.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:OpenApplication>
+      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="서버 선택 OK 버튼 | Click" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e20da645-2b54-45d0-bfc9-630657d7db3e" InformativeScreenshot="fca3a55eb69e6afc061aa31a0fe42ac1" Selector="&lt;wnd app='exceed.exe' cls='HCLXDMCP' title='XDMCP Display Manager Chooser*' /&gt;&lt;wnd cls='Button' title='OK' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:Click>
+    </Sequence>
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Exceed 로그인 | Attach Window" sap:VirtualizedContainerService.HintSize="476,446" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="73e4705e458c329abca48e34a9bf220d" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Exceed 프로그램 | Sequence" sap:VirtualizedContainerService.HintSize="242,300" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ss:SecureString" Name="PW" />
+              <Variable x:TypeArguments="x:String" Name="ID" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;AirCrew계정&quot;).ToString]" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[PW]" Username="[ID]" />
+            <Sequence DisplayName="Exceed 로그인 | Sequence" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:FindImageMatches Matches="{x:Null}" DisplayName="ID 입력 전 이미지 확인 | Find Image Matches" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="FindImageMatches_1">
+                <ui:FindImageMatches.Image>
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                </ui:FindImageMatches.Image>
+                <ui:FindImageMatches.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="7551841d-8d18-4376-8d93-6b15dc98319d">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:FindImageMatches.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:FindImageMatches>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayMS="1000" DisplayName="ID 입력 | Type Into" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[ID + &quot;[k(enter)]&quot;]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dc17f75c-9029-4ad9-8089-07cbdfe3aaad" InformativeScreenshot="d7662de5236f4da5725d35735fa1cc43" Selector="&lt;ctrl name='Exceed' role='client' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:TypeInto>
+              <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="PW 입력 | Type Secure Text" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[PW]">
+                <ui:TypeSecureText.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6f74050f-ab66-4dde-b3d3-5340473fe80e" InformativeScreenshot="ef5162391c6c1583496b32b132d68241" Selector="&lt;ctrl name='Exceed' role='client' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeSecureText.Target>
+              </ui:TypeSecureText>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Enter | Type Into" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="%[k(enter)]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dc17f75c-9029-4ad9-8089-07cbdfe3aaad" InformativeScreenshot="fbd656f219d708e52d84805434db7429" Selector="&lt;ctrl name='Exceed' role='client' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:TypeInto>
+            </Sequence>
+            <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="로그인 확인 | Find Image" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+              <ui:WaitImageAppear.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAYCAYAAABurXSEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB9SURBVFhH7dA7CsAgEEXRadOkyfoCabM5i2wh2xA71zHBQhDyyMeIYnjFYVBELiNm27U3jK6F0bX0Hz0vaxHpnyn0NscpOj3nsM7D+6DU/4wOGA00iVaRTxgdMRr4TzR6+AajAUZHd9EyqQ46Zs8m0U/CriY3HXHTYFrn9QD9Soqwh28paAAAAABJRU5ErkJggg==" />
+              </ui:WaitImageAppear.Image>
+              <ui:WaitImageAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="65d1072c-36d1-43c9-b1d6-24944ad88ac2">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:WaitImageAppear.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WaitImageAppear>
+          </Sequence>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WindowScope>
+    <ui:LogMessage DisplayName="Exceed 프로그램 로그인 완료 | Log Message" sap:VirtualizedContainerService.HintSize="434,99" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Now.ToString(&quot;yyMMdd_HH:mm:ss / &quot;) + &quot;Exceed 로그인 완료&quot;]" />
+  </Sequence>
+</Activity>

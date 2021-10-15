@@ -1,0 +1,451 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="원본파일_실행" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_OpenFileCode" Type="InArgument(x:String)" />
+    <x:Property Name="in_OriginFileName" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:원본파일_실행.in_OpenFileCode>
+    <InArgument x:TypeArguments="x:String" />
+  </this:원본파일_실행.in_OpenFileCode>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1139,3048</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>원본파일_실행_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="원본파일_실행" sap:VirtualizedContainerService.HintSize="663,2983" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="NoneFile_Bln" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Console &#xA;  &gt; Crew Managerment " DisplayName="Crew Managerment 실행 | Sequence" sap:VirtualizedContainerService.HintSize="621,1068" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Performance Meter Menu | Click Image" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+        <ui:ClickImage.CursorPosition>
+          <ui:CursorPosition OffsetX="1" OffsetY="-21" Position="Center" />
+        </ui:ClickImage.CursorPosition>
+        <ui:ClickImage.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAABACAYAAABGHBTIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVGhD7ZaxTcRAEEU3JSGhLko46dJrgTYIqICU4FqgjRMZdSz6lpAs62uYW5vxePcHT9/yjWb07icu1+eXOhLjCd++vutITMIf188hOJ0vEu4aCUeBw3vdDRfG0de39+l5j9uhwnPZPaRDhZlstHSYsCUbKR0ijCO44YXt2IqwhrMg4d4ZV3gkCvsnemVqmP3QKxLuHQn3joR7R8K9I+ElGNgCthuw2RbYbgZm/xRm7+8BH+zsPfjv/UskvETCDUh4BvbXUlYhYQMJL5FwA4cTZkfuQcIzJNzA4YTLU60P9bE5DyfskbJSDRukEPZIWamGDVIIe6Ss3FwYS9dwuIaxeA1qeMbvfq8cSzVskEIYM145lmrYIIUwZrxyLNWwQQphzHjlWKphgxTCmPHKsVTDBimEMeOVY6mGDVIIY8Yrx1ING5zOl/oDeL+zNbZEVVMAAAAASUVORK5CYII=" />
+        </ui:ClickImage.Image>
+        <ui:ClickImage.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="553b8db9-6dc2-46e5-9045-7b5eb792658c" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed*' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:ClickImage.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ClickImage>
+      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Console | Click Image" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+        <ui:ClickImage.CursorPosition>
+          <ui:CursorPosition OffsetX="-27" OffsetY="23" Position="Center" />
+        </ui:ClickImage.CursorPosition>
+        <ui:ClickImage.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.7" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIkAAABTCAYAAACrgSSAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUnSURBVHhe7ZxBbhw3EEXnDjmBrqJ7BAigVda6is6RRfZa+RqBdj6H4+/kG6XSZxfJpj1N43/ggV1VJHuG/GaPDMzc/vr70xdjjrBJTIlNYkpsElNik5gSm8SUDJnk7e3tNGpec226TbJSDw8P8h7mmnSZBHp9fV2KjbIPQyZ5enpagk2yF8MmwebefvvvkRFbheqLzyU2yV4Mm0RtPsi63W6yr02yH6dPEm48RGNQyig2yX6cOkkI1TIJ4Bib5DxRqr6aJSfJNzOQrzEEMzCOY2ZMkqX6zLJ6vhFm7s0xv//x53dyn9UsOUkiVDxFAMeMmgRCGxeFuRVAP2OhFTP3nhlzlumTRAEDQC2DoJ0xiVoU5qBcy7kolYuqxjHfqkcx1wKK7w1iS8WaEuutcStYe5LwkZNMAjhmlUmIqscchBYxYT9cQ7HGOhTHMWYNinNQOccxCoj3YwzhWs3BHNoIx7IPYLyCNZ9J/odaeZIAqlXjQqlcvFaoOoQ25qE8p6q3xihynfHRHDlmDm0rf5ZTJ0k2ChVNkvvOmARgAaiYh9Ti5IWN9QikxiuxX7yOY3pykVzP8WyfKj/K6ZOE7TfS40b1nTUJwZuGYi7GvFYLGeOYby26ohpT5SK5nuPZPlV+lGGTYJPPcsYkAGotXLzOQCqX+6tcRNV7c5Fcz/Fsnyo/ypBJVtJrEkjl1EJBuG4tDDSywK0Y6plH5SK5nuPePsyr+Oj+vXSZBGBTV6Lu0SILObWYUCsPIW4tMNTKQ4g5FlL36clFcj3HvX1ijUJ8dO8Ruk0S4Ubj8dPDjDEyeMORWIuLkmsxr2pkdGyrb08uMjPv0ZyoEVWf4ZRJwPPz8yGxr5rrLNTKRTHvKU2iNn4lK8yz+l+Oec+hSaKwoWdaqFX7UaeMWUPTJFGtzR1tIZWDbJTrIk1yL9ko10Sa5OXl5S7YJNdEmgSbdS/U6zH35fCDqzHAJjElNokpsUlMiU1iSmwSU2KTmBKbxJTYJKbEJjElNokpsUlMiU1iSmwSU2KTmBKbxJTYJKak2yT82sIZ/nn7LOc216bLJNhg9cXvEfD9XxtlT0qTYGNXCj9LYaPsxaFJaJD8iwBnsVH2otsk6ovgM9gk+zFkku+/YjQJ58K1TbIPwyZ5fHycwibZlymT4K+Vo1Zhk+yLT5JFQCr/KzBlEnxvN58eKhc5YxIl1e+eQFgvVdudy58kEFq8FkLlvvcEsknSZxJ1cjBPY0RmTEKpxadhYi4q5lnr6UON1FhXrzMq13bh0icJpMyggNCyP+NYh9iHinXWSKvGOALFMcyhPRq3A1uYRNUiENrWJvGam5Vz+ToCoT2am3GeG23rfjvxy5hE9Yv5eK3qjGOduWruVqyk5ro6wyY5A+fC9RVNwlyOq7mPYgX77MKQSVZo1CSQqkUgtfgxH69VPefjdTV3T7wzpUnw1wo2diW9JgGtxYZ6Yo6F8jwqp/JQrqPNfdT8R/EuHJoEYDP5uFhFr0GIEvJqU6hch1R/5qIQj8zNes4xTyFWfa5OaRKATSXcaDx+eojGIOoeFVjcTNVP1Y5yR2N766380birUz5uMtx0gB/sPSL2hTnUfOq+5lo0TYINVBu/EppH3d9cB2kSGCQKG3qmhXIOjyLIRrk+H0ySDcLNPNtCKgfZKNfmnUmyQX6mYJT4Wsx1+GAS/L/IPbBJrssHk2Cz7kV8LeY6fPhMgs8G9yK/FnMNPpjEmIxNYkpsElNik5gSm8SU2CSm4NOXfwEWvU82w8MkvQAAAABJRU5ErkJggg==" />
+        </ui:ClickImage.Image>
+        <ui:ClickImage.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d421b277-98ad-4f01-9bd6-973b49003779" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;&lt;ctrl name='Exceed' role='client' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:ClickImage.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ClickImage>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Console창 활성화 | Click Image" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:ClickImage.CursorPosition>
+                <ui:CursorPosition OffsetY="70" Position="TopLeft">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                </ui:CursorPosition>
+              </ui:ClickImage.CursorPosition>
+              <ui:ClickImage.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.7" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAUCAYAAAB7wJiVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEgSURBVGhD7ZVBikMxDEN7wblQj9ULtmQhEEJ2gkn4ZsiDB/2SsvKir8/f+3vt4z1IM+9BmnnkIBFu21XgupNuP8gM96ajwHUn3XoQJupd3lHgupNuOwjj+khHtNG97rQfuM3Q4XrOtANuU3X7QVwXmeF27o3bMdxnO6Abfse5oruqjx2EmeWMZviOMpXJcuA2nGV5xccPstKBbMMZ4E43sw64PoK3Vf/VQTgHUa+5dsD1Ebyt+tifOljpQLZRGZdz5joQ9afcdpAhE/X8G+gGaOZ2mun3wGWDLAfZRjvNKm49yHDG6tbtVjOFN9luoBt+x7lDtxW3H2QYsbqNNrOMc6A9dLieM+0Yt6t45CDXuvcgzbwHaeY9SDPvQVr5/v4Am0gG0OTAmGAAAAAASUVORK5CYII=" />
+              </ui:ClickImage.Image>
+              <ui:ClickImage.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c1f2e45f-6a85-4769-bb7a-d9a7597d03a0" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ClickImage.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ClickImage>
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
+      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Console창 활성화 | Click Image" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:ClickImage.CursorPosition>
+          <ui:CursorPosition OffsetY="70" Position="TopLeft">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+          </ui:CursorPosition>
+        </ui:ClickImage.CursorPosition>
+        <ui:ClickImage.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.7" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAABnCAYAAAD/nUeAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVHhe7dExAQAwDMCg+XdaBTtbGTw5UMDbPxunAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArACsAKwArABq9gCuDGd8sDamqQAAAABJRU5ErkJggg==" />
+        </ui:ClickImage.Image>
+        <ui:ClickImage.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c1f2e45f-6a85-4769-bb7a-d9a7597d03a0" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:ClickImage.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ClickImage>
+      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="맨 끝으로 이동 | Send Hotkey" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="end" KeyModifiers="Ctrl, Shift" SpecialKey="True">
+        <ui:SendHotkey.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8c6410a4-8265-41df-9bca-4018a5b7f988">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:SendHotkey.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:SendHotkey>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Crew Managerment 실행 | Type Into" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[&quot;startaircrews_prod_cc&quot; + &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e4c7f0e7-821c-4b94-a1e0-586ad33c7876" InformativeScreenshot="53b35519676c854504ecd3133e647eea" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;&lt;ctrl name='Exceed' role='client' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:TypeInto>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Crew Managerment &#xA;  &gt; xterm&#xA;    &gt; 파일 실행" DisplayName="텍스트 파일 실행 | Sequence" sap:VirtualizedContainerService.HintSize="621,864" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="System Utillities 선택 | Click Image" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+        <ui:ClickImage.CursorPosition>
+          <ui:CursorPosition OffsetX="-98" OffsetY="56" Position="Center" />
+        </ui:ClickImage.CursorPosition>
+        <ui:ClickImage.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+        </ui:ClickImage.Image>
+        <ui:ClickImage.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="79b4f897-5594-4686-8679-a7fc7acde87c" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed*' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:ClickImage.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ClickImage>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Open A Unix Window | Type Into" EmptyField="False" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="o">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ac4143c5-c0ed-488a-99d0-40efa3c42d1a" InformativeScreenshot="b31fd9d1d13acd369a1b4d5d1cee9a07" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;&lt;ctrl name='Exceed' role='client' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:TypeInto>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,324" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="xterm 활성화 | Click Image" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:ClickImage.CursorPosition>
+                <ui:CursorPosition OffsetY="40" Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                </ui:CursorPosition>
+              </ui:ClickImage.CursorPosition>
+              <ui:ClickImage.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAATCAYAAAApmKv9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADaSURBVFhH7ZRRCsMwDEN3wV2ox9oFO/IhpglbzpIOxvADQfvk/Jg2t8f9ODuv9EIkvRBJL0Ty9YWAqPvF9EIkSwthnI/I5gfcca/PWTfQfgA3k+UvhFEXzQDXDdDPno/mMjeTrV8G6HM241zkGZ7LOkYd3qts3yFK1kcuw511Haicy6ULcX3kMtxZ14HKuVzyyzDZTOWigNkOVM7lsksVZHORG7BHx88D7l0HKueyvZBZBzLP6AzeOWDFuSwtBGR+8KkHUc/OdaByLtuX6r+lFyLphUh6IW85zie5qa6clLI3mgAAAABJRU5ErkJggg==" />
+              </ui:ClickImage.Image>
+              <ui:ClickImage.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a80a8bed-1c37-46a1-a216-e67a41c2f5c9" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ClickImage.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ClickImage>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <Delay sap2010:Annotation.AnnotationText="딜레이 2초" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="436,53" sap2010:WorkflowViewState.IdRef="Delay_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Delay>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="실행코드 입력 | Type Into" sap:VirtualizedContainerService.HintSize="436,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[in_OpenFileCode + &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10ce9558-4499-4cd7-9c3a-6bb9077e98fd" InformativeScreenshot="4bf59995f15d71e277a17b7de2a962db" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;&lt;ctrl name='Exceed' role='client' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:TypeInto>
+    </Sequence>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="621,307" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ImageFound sap2010:Annotation.AnnotationText="Timeout : 3초" DisplayName="원본파일이 없는지 확인 | Image Exists" Found="[NoneFile_Bln]" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+            <ui:ImageFound.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+            </ui:ImageFound.Image>
+            <ui:ImageFound.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a0d824a-8f7c-4bc7-b249-806f7be9aaeb" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;" TimeoutMS="3000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ImageFound.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ImageFound>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:ImageFound sap2010:Annotation.AnnotationText="Timeout : 3초" DisplayName="원본파일이 없는지 확인 | Image Exists" Found="[NoneFile_Bln]" sap:VirtualizedContainerService.HintSize="621,137" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+      <ui:ImageFound.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+      </ui:ImageFound.Image>
+      <ui:ImageFound.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a0d824a-8f7c-4bc7-b249-806f7be9aaeb" Selector="&lt;wnd app='exceed.exe' cls='Exceed - Hummingbird' title='Exceed' /&gt;" TimeoutMS="3000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:ImageFound.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ImageFound>
+    <If Condition="[NoneFile_Bln]" DisplayName="원본파일이 없는지 확인 | If" sap:VirtualizedContainerService.HintSize="621,355" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="원본파일 없음 | Sequence" sap:VirtualizedContainerService.HintSize="242,207" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="원본파일 없음 | Log Message" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Now.ToString(&quot;yyMMdd_HH:mm:ss / &quot;) + in_OriginFileName + &quot; 파일 없음&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+          <Throw sap2010:Annotation.AnnotationText="원본파일명 + 파일 없음" Exception="[New BusinessRuleException(in_OriginFileName + &quot; 파일 없음&quot;)]" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Throw_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Throw>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <ui:LogMessage DisplayName="원본파일 실행 완료 | Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Now.ToString(&quot;yyMMdd_HH:mm:ss / &quot;) + &quot;원본파일 실행 완료&quot;]" />
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
