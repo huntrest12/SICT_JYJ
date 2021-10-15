@@ -1,0 +1,343 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="작업_사이트_오픈" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:k="clr-namespace:KoreanAir_Library;assembly=KoreanAir Library" xmlns:kg="clr-namespace:KoreanAir_Library.Google;assembly=KoreanAir Library" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1142,1643</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>작업_사이트_오픈_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="31">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>KoreanAir_Library</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>KoreanAir_Library.Google</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>KoreanAir Library</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="작업_사이트_오픈" sap:VirtualizedContainerService.HintSize="586,1578" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:RetryScope DisplayName="사이트 오픈 | Retry Scope" sap:VirtualizedContainerService.HintSize="544,1486" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+      <ui:RetryScope.ActivityBody>
+        <ActivityAction>
+          <Sequence DisplayName="Google Login | Sequence" sap:VirtualizedContainerService.HintSize="502,1312" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="Login_Bln" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Kill, Logout | Sequence" sap:VirtualizedContainerService.HintSize="460,331" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <kg:Google_Account_Logout DisplayName="Google Account Logout" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Google_Account_Logout_2" />
+              <k:All_Kill DisplayName="All Kill" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="All_Kill_1" />
+              <ui:LogMessage DisplayName="All Kill | Log Message" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;All Kill&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <Delay sap2010:Annotation.AnnotationText="딜레이 2초" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Delay_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Delay>
+            </Sequence>
+            <Sequence DisplayName="MHS | Sequence" sap:VirtualizedContainerService.HintSize="460,787" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:RetryScope DisplayName="MHS 오픈 | Retry Scope" sap:VirtualizedContainerService.HintSize="418,633" sap2010:WorkflowViewState.IdRef="RetryScope_2">
+                <ui:RetryScope.ActivityBody>
+                  <ActivityAction>
+                    <Sequence DisplayName="MHS 오픈 | Sequence" sap:VirtualizedContainerService.HintSize="376,421" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="MHS 오픈 | Open Browser" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OpenBrowser_7" Url="[in_Config(&quot;MHS_URL&quot;).ToString]">
+                        <ui:OpenBrowser.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                            </ActivityAction.Argument>
+                            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_7" />
+                          </ActivityAction>
+                        </ui:OpenBrowser.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:OpenBrowser>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TakeScreenshot" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_Folder">
+                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ExScreenshotsFolderPath&quot;).ToString" />
+                          </InArgument>
+                          <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath" />
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Google Login workflow - 1" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="0.Common\Google Login.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_CredentialAccount">
+                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;Kalmate계정&quot;).ToString" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                      <Delay sap2010:Annotation.AnnotationText="딜레이 2초" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,53" sap2010:WorkflowViewState.IdRef="Delay_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Delay>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:RetryScope.ActivityBody>
+                <ui:RetryScope.Condition>
+                  <ActivityFunc x:TypeArguments="x:Boolean">
+                    <ui:UiElementExists Exists="{x:Null}" sap2010:Annotation.AnnotationText="Timeout = 10초" DisplayName="MHS 오픈 확인 | Element Exists" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d7129776-dece-47ba-8ce9-45fcc7ce0596" InformativeScreenshot="0c73723b2f8e64cfa3cbe3c1dc213b36" Selector="&lt;html app='chrome.exe' title='Message Handling Service' /&gt;&lt;webctrl parentid='MHS03' tag='SPAN' aaname='New' /&gt;" TimeoutMS="10000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:UiElementExists.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:UiElementExists>
+                  </ActivityFunc>
+                </ui:RetryScope.Condition>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:RetryScope>
+              <ui:LogMessage DisplayName="MHS 오픈 확인 | Log Message" sap:VirtualizedContainerService.HintSize="418,22" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;MHS 오픈 완료&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+            </Sequence>
+            <Sequence DisplayName="BASE | Sequence" sap:VirtualizedContainerService.HintSize="460,22" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:RetryScope DisplayName="BASE 오픈 | Retry Scope" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RetryScope_3">
+                <ui:RetryScope.ActivityBody>
+                  <ActivityAction>
+                    <Sequence DisplayName="BASE 오픈 | Sequence" sap:VirtualizedContainerService.HintSize="552,269" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="BASE 메인 페이지 오픈 | Open Browser" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="OpenBrowser_6" Url="[in_Config(&quot;BASE_URL&quot;).ToString]">
+                        <ui:OpenBrowser.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                            </ActivityAction.Argument>
+                            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_6" />
+                          </ActivityAction>
+                        </ui:OpenBrowser.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:OpenBrowser>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Google Login workflow - 2" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="0.Common\Google Login.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_CredentialAccount">[in_Config("Kalmate계정").ToString]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                      <Delay sap2010:Annotation.AnnotationText="딜레이 2초" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Delay_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Delay>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:RetryScope.ActivityBody>
+                <ui:RetryScope.Condition>
+                  <ActivityFunc x:TypeArguments="x:Boolean">
+                    <ui:ImageFound Found="{x:Null}" sap2010:Annotation.AnnotationText="Timeout = 10초" DisplayName="BASE 오픈 확인 | Image Exists" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                      <ui:ImageFound.Image>
+                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMUAAAAiCAYAAADveR3KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABEKSURBVHhe7ZsJdJXFFcdDCItaBdkERJFdQetarWJtRS2KbLJZlEK11FbRox6pilipclRQK4KCEBYBCwYQUYsHtwKCYRFBhGKQVWUnARIg28tyO78vmTBvMvO9QO3RNu+e8z8vb958M3dm7j5fEhKey5Y44ojDgLMxjjgqM5yNccRRmeFsjCOOygxnYxxxVGY4G+OIozLD2RhHHJUZzsYfGIkjj8jJT2dI42HbpeVjaQEa/HWHnPTMAaky8qjzmf8HVP9btlR7wf3bjxVVFGqPzpGTR7l//5+Es/EHQrURWXLFg8tlZJfhsvKibrK9dXv5tmUJ+Hv5xd1kaM9R0ubRDf+xcnCYic9nS5ISwpovZgeHepL6pN3Vn76udhPmeKe9lCONx+VIq4k5MQWdefvNz5fUnUWyYFuhNByb4+wHmKOqxQs808bcLj717xr0gSeU0O57PIDPp5dH5EBusazYXRTKN2CdzMn8eh0mP/z+k5eO8QXf7CNKx57qvvo5/Z118+wp6gzrjMmRJq/mSEu17+x9vZdzgj42L6FwNlroPDdPpq4vkDGrC+TBhfly38f5cv8/S8Dfjy+NyPi1BTJ7Y6E0Ty5h4qFFEZmyrkD+vDhS1p/Pv6ZGgn4vfBaRBOUR9BxNHt8iUzs8KBnnXOxH04sk4+wLZW+zy2R4t5FSa/i+KD7rqg1I/rJAZnxVEByWySN4RrVNVjzRZ+ZXhfLe1hJ8tqdI1uwrwesbCuTSablRyjHw/Xz5YHuhTFTP8awL0/9VIB+qPou/K5Iv1DhfHyyWrPxigXq9kxfFJ2B8DrHH23ny5f6ioJ8m9tmcXwPBefWLAln4bWFwHvzN3Own62B+Ps8ef0w4OYuhSyLBGuer38C7WwoDIWafjtczMR7K/sSnETmSX8pwKcG36xlwzoQc2ZBRJJ/sKArm17xofj7+plA+31sk32QVB/zyzKlKITiT3UeLA4PB2szn9LOsmz1kfJ43+UJhkU14tnnywtloAYEqiD43J+08UizN1OLRXIQujFCYKs+VWPvLh6yVrxtfIhnNFGxFoE0pQnr9NrL/9BaSXru5pNdpJemN28min90qjYZ9U8YnVmKp2vTvgzrOOSbItysrXlQi36HEAaTnFEu+tXQURlsrPrFiDyhl/e6we9B92cVOq8u+ogSxCOGhL8+gXL2VUnI2JsHnvepcsbb2PC7UUNb7l2/kBufm2wsE8gyPt8Dao4ixaFtmsVw4NTd4Bt7YJ3s/XXQorzhURhnXx1s5OBstcJDd5+WVDu8mrOL5U0oWA9ByNNmmVKXxv56dV2ahzhm5W7LaXS0ZjdqVV4pmCmcr71CvlRxoe5Vk9hggh2/7oxy8poukN2yrFKSFLLq0t9R5ak/ZvHiLWJs/6vMCueL1XBm5MuLdSCw9a9Dj3rHAMosGISR/+jBfWithb6E8JWM/rzyhHhshx/0zznmTc0saQ4jx7vogv2xuE+wbvKCAYdT1rWjvxNloJUTIrp557KwqAvpXhODN9TwgFMLy+4j9+vnfo/lCqYkuwgiPd+6kXLk2JS8Qfh8NVtGLywOXg7PRAQYj3vXR2DXlXf411kYOXxaRWspi6N8TVQ4x+dpBEmnQUjKaXxqtEKDUQ2R27SeRRalSdOCgFB8+IoWbtkhO8utyqMMtsl95jtEdhwbJuR73JmXlfdYFV6uTQqzf8l3+QzLDEIRxk1IUFzHX6cpL6b4AQ3KLMiSaDw6NduYkZCLMCiMUWyuSC4RyYUTIYe41QCggQpiKeggN1o/Q4YXCiHUR37vGAITiPuIsXOHcWSpHYD0uot08J71GFxFyag8aCmejB7e+618QnsTsi4IMUbGhpt++l18WQmi0G7xcspteIFlNzpd0V+jU4FzJUB4ismRZ6SjRVLBpqxzuf4/sqt1SrnwgtWxc3KTPYpBjmDz4whGE2Q5hyJ1cRN/6r0T31eiv1g2Ri5ntsSwvY14/q3wuokHOFIvIoUxDhbGAWLN9FhXFdYqnMMpV20mY5XoWIOD0cRF5psuSo2TkUS5CSU3jgYf0hXfkKq7xy8HZ6EHYQWJFdD+s0KCP8oPF47L5zWaG0GTmPS+INFG5AiGSrRAqqd5ft7VkduwjRXv3lc5Snop27pFDfQbKuKvulaQRh4OxSWBJdl1kCieC8fZm92YTO9tWhdzCRS4FYr1YPYD1ssMVqk2xiATaZ9EJAWMR+3/JtGPzkidBeJkTUQrWhLePRSidj29yCzu/0aQTbBuM5ctRSbRNpXj0Ezd/7AXJvjmuF85GD7AAPrpqRsnmUwKjKqLJF2NeruLu7XcPkfyGrSXdqxStJPPGPiK79gRjpe3MlDHzN8gj01bKi2+vk9S0vUF74edrJe2SzkEFi7FRCruio4nYX/NA/OqKzQkvXJYfb+ciNtwMn1AmkljCTXhBmEyjQPhGnkFiSh9dpbKJcXXSaePFVSUJL0bHrgKZhIXVQvOLUqOGwp+IUqD48ESViHCZNbgIftqq3Mk1BnmFz4tT0XI9A68UK1w09+vCspDrzHE5QS5oE/y0L5XPCsHZ6MGv3vC7zk5v5gUHuD49Whhxb9Se7bFIJLOeGCFH67cMVYqjN/YWSU+Xyct2SNM7ZkjNmydIUufxUqPzBDmj7zR58s0vJSLFkvvkSGk/aFEwNkLnUwosbFMVg7oqMjxDiOiLiXUoZBMJYh813gWv5QZhJIkftFfFuxgJe5xuysVDTymri9K8ogTMR6NXuwWYdjwUysdehtHdpYYAQYWIrY9XKVDqR0qtcN9/5AXWGx58ROjmmoM8B2PgojCloFTuIhJ35JKwyZY9SrTsDcUX17heOBs98CkFFsuuD5uEZTITKO2G86anyJG6LST9rAudSnGwTgspvm2gpCxMk1oDZknC9S9L1e6TpNotkyRJIaHTeDmpS7KM+GirFC9Nlb53qD5qbITapxQIMNbOJgSMQzErTjZ8SgExLmOYxCFRJjbHgDf2Cu+grSkVKxTIRXgy7n7MMYAOn25WxghPQJ3fRyg/F1qED5zViSgFnpP1YYm1kJHg+srKyIKZAGuEKQU5m90fIC++cJH12PuuCY+EkaO44RrXC2ejB2GeIhZxiacPQivFwdXrJXJFB9l3ytmS0Vwl2iTbQcKt0Kid5DY8V3Y/M0aue26JJNwwTqr3mCQ1ek6OQsJN46XN4Pmycdk6GThobjB+mFJgPahAZXtCY4SQyzaX0IQpBZd7hI2EQ/qQXEqhixVUaRAu5kERiY19RJxshl9ACwk88f1KFQrqErCLyCNYF+sz700qAubmvgCCT+6iyA1QNC4FfYRnsfkOUwqKB3Z/jREr3AeGwuNpw+6nUA5fOOeEs9EDX06BthIm+RaribBBj0XtedWOLJFZc5QCtJX9tZpJ+hnnldw/1GsjGae3kKKB98qnqzZLw7vmSELHsVKz15RySpHYdYKcNiBFZs5dLt0fXRyMHaYUHC5eizDHpxgQ4ZDmVcOnFCgBVpEDxSrpyz7TqgLi6S2HSvYIb4VicJeDkrq8lyYOtZGVyGul4Lad7wg5N8o+QmF0WfN4E21CQF/+EEZcENo3yWFKgbK6EnT21ReqkVPwWgjjhnlLPDGVL3tsJ5yNHtj3DiZxYUWlI+xwIZ04EtM/PGNN0JY/b75kdvqNHGjbPrikO9i+k2QPG6HMdoYsSMuQWr2VR1ChkkspqnZLlhr9UmT0uPfl4qHrgrHDEm1icL0eLu98hBDY+UCYUpjCzyHqaok5BuGZJgQGK8fdB6BaFrZ3ttW1lQJw6Iwbi/Box6MUVIUg+COGR5nxiHhHjGGYwthlUAyDTykI61xKAa++nMKsPrWZlBtq6Cq8bmejB11CLl5QCvpQ3QkjNoSQghj1zDtTZNXWA0F70cFDEvl0hUQWLpXCTduCNujjtTulbt+pQZhUs1e0QgRK0X2i1BwwR4Y9+ZbUe2pXwAOJtu/mlHey9CHxuoWv8gNRStVrB74yKkphl2TxHFTe9CFTbdNhFQJNfM8z7IUGCbEvBLKtLtUnyK7u6WQ4jCj1moIaBio6Om5HAamyYXQQRA1fqRoiXDP3BiPhU1yfB6PNV32iugY/9GNNKWmlm+wg1kD+Zo9fDs5GD8I2HC9CH8qRc9SmhxEhA69EJPSbL1c//I5s3KXCKA8tWr9bTu09xasUVXpMllq/myV973+37M1ZrJFdidBE2KYFgs95m/y8ojCmB/CVZNnssPdqWKsuQ/KOjjmmCUIAHV65yHxrQHsK7oPMMYj1XWVJk7DsvG4S63bXvB+gDKstsg3mDAudCX003zrZdxFW3+Up4JMwyUWcs1kOp8welluZvHjhbHQAbQ17p0gnfAAv4Lug0cQmV71d5Qo3jJUrH5onC1bvKP0lmgZPWaHyiVclqXv5JBsk9JwmLXonS7O/bC6bn/d8fB4At29WI8JCQogQS28ib1u6CKWwX/MAxLrkUeZecLFl99Ngj8PiYgiPDD/aclLZswWpIheDCDGlY1fJWOP3ygtpIgl29QEILaFUGFGkYX1hxQo8CIbBHh8e0w64ZY9wyUyiyRfDkm7OitK5OX45OBsd4HVqn4ZDxMRmObOilaokFf4k3DhO6vedJv1HLZK5y7bJmm0ql1izQ+4cs1hO6TFJqnad6FSIpB5TpHrv6XL5A58YvB4ts6IuYlOo1Oj+bKLPq0BYHZLuy6b7FQ0ibERgsVQdUvKChN71aoJ5w2wjrECgiRKoeXFG6dN+iY41+V6LMAlldSkFSkeVzMxx7NdUTBD6hXk4CIHH68RK2Alv7fEJK8Nkj7DL9Hrco4QRXhv5NK8JouBstIDlpZQZi7CkHCzPYL14UzSM8BaJQzZK0h8+koQuyQoT5DQVDjXoP11qq5CpivqeqJTGpRDVFaoqpaj90MqylwGxRMTYYe4TQhjMm+Kwd7ogFClMISDmxGoB+rsIgfeFIOwb+xV2+D5CUbivYP16PKyhbyzifP4dQJ+VCUIh/ufE3kNCMlf1hpzD9Tb0iRLzcuGGYgK8VaziDYTs6b1FSWMpH2N63xR2Nlqg2qAFAxAXs7H6kzYsFp83zD5WyiR2RvBtoi/3FAnPZpb0fTZLqg38UKorhcBzVOmWHCTQ1Rz3EhrVek6RqvevUHnEsbdjL1KCrvmBN8pwzE8tHetAG0BwsS467EA4qKKwRg6FDdPr0c/w3RyPTw2+U0Gijw2tJOBOKyk2QYlYz4fVZUxd6SF51CC2JozV8yKszMP67ArYMKPaBcELXgZBNuc2wUuI8MHczEVSTjiCpbdfRweEarq/3g/2El55Ngz2egBjUaLG8pNAs0aMGJ5P74E5BuEwBptz595E80WYZiu2lmHed8MQ+gxUhZSCTcSyUlHhbzafGBqN5JPqAr+R2dv/4kjFhGQWa8bBIYy8Rs2hmf34L7zER76S6v1mS41erzkVIUCvqVK9/1tSZehW9Vz0v6SykWwMOQ28EZ8i8Cye0I42wBrsV0/oxz0MFpdQicoUlpEEWj+HFdXj8anBdw5Q9yMkgQ9uon+qLDb/P8LbpV53rcC+sVfsLbzpOWhHeTVYo/5Nz8t6Wau9p/ShDIniUO507rsF5qBQwdjMxXdyMMY3QxSzv94XDf1cRWCuByBP+tV+wN+s0d4HDfZU9zHXhtfE0KB0eD7CWUIm9ti1jig4G79nwGCDUkGNdSh4jcTHNkvS3UuU91gg1QfMk2oD3lF/fyBJ96VK4uPbJaH0bdg4YoP9tgUmjhhwNv5YQGiklCRhhAqzjDApjjj+q3A2xhFHZYazMY44KjOcjXHEUZnhbIwjjkqLbPk3BDULdNdv74kAAAAASUVORK5CYII=" />
+                      </ui:ImageFound.Image>
+                      <ui:ImageFound.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bb95df8b-1219-43f4-ae34-7402a70af16c" Selector="&lt;html app='chrome.exe' title='Dashboard' /&gt;" TimeoutMS="10000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:ImageFound.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ImageFound>
+                  </ActivityFunc>
+                </ui:RetryScope.Condition>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:RetryScope>
+              <ui:LogMessage DisplayName="BASE 메인 오픈 확인 | Log Message" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;BASE 오픈 완료&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="BASE 조회 페이지 오픈 | Open Browser" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" Url="[in_Config(&quot;BASE_SKD_URL&quot;).ToString]">
+                <ui:OpenBrowser.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                    </ActivityAction.Argument>
+                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_4" />
+                  </ActivityAction>
+                </ui:OpenBrowser.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:OpenBrowser>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:RetryScope.ActivityBody>
+      <ui:RetryScope.Condition>
+        <ActivityFunc x:TypeArguments="x:Boolean" />
+      </ui:RetryScope.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:RetryScope>
+  </Sequence>
+</Activity>
